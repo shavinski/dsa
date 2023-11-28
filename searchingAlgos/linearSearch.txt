@@ -1,0 +1,10 @@
+Linear Search
+
+O(1)
+Best case scenario 
+
+O(n)
+Worst case scenario
+
+O(n) 
+The average run time
