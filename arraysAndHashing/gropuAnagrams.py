@@ -23,19 +23,17 @@ class Solution(object):
         """
         result = []
 
-        for i, word in enumerate(strs):
+        for i, word in enumerate(strs):    # n
             sub_arr = []
-            count = self.generateDict(word)
+            count = self.generateDict(word)   # k 
 
-            for j, check_word in enumerate(strs):
-                check_count = self.generateDict(check_word)
+            for j, check_word in enumerate(strs):   # n
+                check_count = self.generateDict(check_word)  # k
                 
-                print('count', count, 'check', check_count, check_count == count)
-
                 if check_count == count:
                     sub_arr.append(check_word)
 
-            if not self.isInArray(result, sub_arr):
+            if not sub_arr in result:         # n 
                 result.append(sub_arr)
             
         
@@ -51,11 +49,4 @@ class Solution(object):
                 letter_count[char] += 1
 
         return letter_count
-    
-    def isInArray(self, arr, sub_arr):
-        for a in arr:
-            if a == sub_arr:
-                return True
-        
-        return False
 
